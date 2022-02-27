@@ -20,8 +20,16 @@ const farewell = document.querySelector('.farewell');
 const suits = ['hearts', 'spades', 'diamonds', 'clubs'];
 
 while (confirm('Would you like to play the game?')) {
-  // Put your code in this while loop
-  // Remember to use prompt and alert
+  const suit = getRandomInt(0, 3);
+  console.log(suits[suit]);
+  const test = prompt(
+    'Please enter your guess: Hearts, Spades, Diamonds, Clubs'
+  );
+  if (suits[suit] === test) {
+    alert('You are a Winner!');
+  } else {
+    alert('You did not guess correct :(');
+  }
 }
 
 farewell.innerHTML = '<h1>Thanks for playing!<h1>';
